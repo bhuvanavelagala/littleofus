@@ -1,0 +1,6222 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap');
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #fdf5f1;
+  color: #5b3b35;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.birthday-page {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   PAGE 1 — CLEAN CENTERED INTRO
+========================================= */
+
+.intro-screen {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 30px 20px;
+
+  background-color: #f7dce0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.38) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.38) 50%,
+      transparent 50%
+    );
+
+  background-size: 70px 70px;
+}
+
+
+/* =========================================
+   CENTER BOX
+========================================= */
+
+.intro-content {
+  width: min(570px, 82vw);
+  min-height: 390px;
+
+  padding: 55px 45px 42px;
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #f8c8cf;
+
+  border: 2px solid #e6a1aa;
+
+  box-shadow:
+    7px 8px 0 rgba(145, 65, 76, 0.12),
+    0 18px 30px rgba(100, 50, 60, 0.16);
+
+  transform: rotate(-1deg);
+}
+
+
+/* =========================================
+   INNER BORDER
+========================================= */
+
+.intro-content::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  border: 2px dashed rgba(150, 70, 82, 0.30);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TOP TAPE
+========================================= */
+
+.intro-tape {
+  position: absolute;
+
+  width: 105px;
+  height: 24px;
+
+  top: -13px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(-3deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #e9a6ad 0px,
+      #e9a6ad 12px,
+      #f2c2c7 12px,
+      #f2c2c7 24px
+    );
+}
+
+
+/* =========================================
+   SMALL TEXT
+========================================= */
+
+.intro-small-text {
+  position: relative;
+  z-index: 3;
+
+  margin-bottom: 18px;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #8d4a53;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.intro-title {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 55px;
+  font-weight: 500;
+
+  line-height: 1.12;
+
+  color: #713842;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.intro-subtitle {
+  position: relative;
+  z-index: 3;
+
+  margin: 8px 0 10px;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 36px;
+  font-weight: 500;
+
+  color: #81404a;
+}
+
+
+.intro-big-heart {
+  margin-left: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 36px;
+
+  color: #e94361;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.intro-divider {
+  position: relative;
+  z-index: 3;
+
+  margin: 2px 0 20px;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 16px;
+
+  color: #b7616c;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.intro-next {
+  position: relative;
+  z-index: 3;
+
+  border: none;
+
+  padding: 12px 28px;
+
+  border-radius: 30px;
+
+  background: #a94f59;
+
+  color: white;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #793b43,
+    0 9px 15px rgba(100, 45, 55, 0.18);
+
+  transition: 0.25s ease;
+}
+
+
+.intro-next:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 0 #793b43,
+    0 13px 20px rgba(100, 45, 55, 0.20);
+}
+
+
+.intro-next span {
+  margin-left: 6px;
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+========================================= */
+
+.intro-bottom-text {
+  position: relative;
+  z-index: 3;
+
+  margin-top: 16px;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 17px;
+
+  color: #98525c;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .intro-content {
+    width: 90vw;
+    min-height: 350px;
+
+    padding: 45px 25px 35px;
+  }
+
+  .intro-title {
+    font-size: 40px;
+  }
+
+  .intro-subtitle {
+    font-size: 27px;
+  }
+
+  .intro-small-text {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+/* =========================================================
+   SPECIAL DELIVERY — FINAL SCRAPBOOK VERSION
+========================================================= */
+
+.delivery-screen {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f9e5e8;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.42) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(255,255,255,0.42) 50%,
+      transparent 50%
+    );
+
+  background-size: 56px 56px;
+
+  font-family: "Quicksand", sans-serif;
+}
+
+
+/* =========================================================
+   CENTER CARD
+========================================================= */
+
+.delivery-content {
+  width: 370px;
+  height: 500px;
+
+  position: relative;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 48px 35px 35px;
+
+  background: #fff8ef;
+
+  border: 2px solid #8f414b;
+
+  transform: rotate(-1.5deg);
+
+  box-shadow:
+    9px 10px 0 #e1aaa9,
+    15px 17px 0 rgba(112, 45, 55, 0.12);
+}
+
+
+/* second paper behind */
+
+.delivery-content::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px -8px -8px 8px;
+
+  z-index: -1;
+
+  background: #efc5c4;
+
+  border: 2px solid #fff8ef;
+
+  transform: rotate(2.5deg);
+}
+
+
+/* =========================================================
+   TAPE
+========================================================= */
+
+.delivery-card-tape {
+  position: absolute;
+
+  top: -18px;
+  left: 50%;
+
+  width: 120px;
+  height: 31px;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #f2d3b9 0 10px,
+      #e8c3a7 10px 19px,
+      #f4d7bd 19px 29px
+    );
+
+  opacity: 0.95;
+
+  box-shadow:
+    0 3px 5px rgba(100, 60, 50, 0.12);
+
+  z-index: 30;
+}
+
+
+/* =========================================================
+   SPECIAL DELIVERY LABEL
+========================================================= */
+
+.delivery-card-small {
+  margin-top: 4px;
+  margin-bottom: 18px;
+
+  padding: 7px 16px;
+
+  background: #f6cdd0;
+
+  border-radius: 3px;
+
+  color: #913e49;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  box-shadow:
+    3px 4px 0 rgba(145, 62, 73, 0.1);
+
+  transform: rotate(-1deg);
+}
+
+
+/* =========================================================
+   ENVELOPE AREA
+========================================================= */
+
+.delivery-card-icon {
+  width: 120px;
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  background: #fde7e6;
+
+  border: 2px solid #91404b;
+
+  border-radius: 8px;
+
+  box-shadow:
+    5px 6px 0 rgba(145, 64, 75, 0.13);
+
+  transform: rotate(1.5deg);
+}
+
+
+/* envelope */
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.delivery-content h1 {
+  margin: 0;
+
+  color: #733842;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 3rem;
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  text-align: center;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   LITTLE TEXT
+========================================================= */
+
+.delivery-card-text {
+  margin: 18px 0 0;
+
+  color: #9a5960;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.15rem;
+
+  line-height: 1.25;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   NEXT BUTTON
+========================================================= */
+
+.delivery-content button {
+  margin-top: auto;
+
+  padding: 10px 29px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #cf5b68;
+
+  color: #fffaf7;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #923d49;
+
+  transition: 0.2s ease;
+}
+
+
+.delivery-content button:hover {
+  transform: translateY(-3px);
+
+  background: #c34e5d;
+}
+
+
+.delivery-content button:active {
+  transform: translateY(2px);
+
+  box-shadow:
+    0 2px 0 #923d49;
+}
+
+
+/* =========================================================
+   OUTSIDE HEARTS
+========================================================= */
+
+.delivery-deco {
+  position: absolute;
+
+  z-index: 5;
+
+  color: #c94d67;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  pointer-events: none;
+}
+
+
+.delivery-heart-one {
+  top: 18%;
+  left: 14%;
+
+  font-size: 3rem;
+
+  transform: rotate(-12deg);
+}
+
+
+.delivery-heart-two {
+  top: 22%;
+  right: 14%;
+
+  font-size: 3.3rem;
+
+  transform: rotate(12deg);
+}
+
+
+.delivery-heart-three {
+  bottom: 15%;
+  left: 18%;
+
+  font-size: 2.5rem;
+
+  transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.delivery-star-one {
+  position: absolute;
+
+  top: 15%;
+  left: 25%;
+
+  color: #d65370;
+
+  font-size: 2rem;
+
+  transform: rotate(12deg);
+}
+
+
+.delivery-star-two {
+  position: absolute;
+
+  bottom: 18%;
+  right: 23%;
+
+  color: #d65370;
+
+  font-size: 2rem;
+
+  transform: rotate(-12deg);
+}
+
+
+/* =========================================================
+   LITTLE BOWS
+========================================================= */
+
+.delivery-bow {
+  position: absolute;
+
+  z-index: 4;
+
+  color: #d25b72;
+
+  font-size: 5rem;
+
+  font-family: cursive;
+
+  opacity: 0.85;
+}
+
+
+.delivery-bow-left {
+  left: 8%;
+  bottom: 28%;
+
+  transform: rotate(-12deg);
+}
+
+
+.delivery-bow-right {
+  right: 8%;
+  top: 34%;
+
+  transform: rotate(12deg);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .delivery-content {
+    width: 320px;
+    height: 455px;
+
+    padding:
+      43px 25px 30px;
+  }
+
+
+  .delivery-card-small {
+    font-size: 0.58rem;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  .delivery-card-icon {
+    width: 100px;
+    height: 90px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .delivery-content h1 {
+    font-size: 2.55rem;
+  }
+
+
+  .delivery-card-text {
+    font-size: 1rem;
+  }
+
+
+  .delivery-heart-one,
+  .delivery-heart-two {
+    font-size: 2.3rem;
+  }
+
+
+  .delivery-bow {
+    font-size: 3.5rem;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .delivery-content {
+    width: 290px;
+    height: 430px;
+  }
+
+  .delivery-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .delivery-card-icon {
+    width: 90px;
+    height: 80px;
+  }
+
+  .delivery-bow,
+  .delivery-star-one,
+  .delivery-star-two {
+    display: none;
+  }
+
+}
+
+/* =========================================
+   PAGE 3 — CAUTION SCREEN
+========================================= */
+
+.caution-screen {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f7d6df;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.45) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.45) 50%,
+      transparent 50%
+    );
+
+  background-size: 90px 90px;
+
+  padding: 30px 20px;
+}
+
+
+/* =========================================
+   CAUTION TRIANGLE
+========================================= */
+
+.caution-sign {
+  width: 330px;
+  height: 290px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f04482;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 100%,
+    0% 100%
+  );
+
+  filter:
+    drop-shadow(
+      0 10px 12px rgba(120, 40, 70, 0.18)
+    );
+
+  transform: rotate(-1deg);
+
+  z-index: 5;
+}
+
+
+/* White border / inside triangle */
+
+.caution-sign-inner {
+  width: 310px;
+  height: 270px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fff1f4;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 100%,
+    0% 100%
+  );
+
+  padding-top: 62px;
+}
+
+
+/* Pink inner triangle area */
+
+.caution-sign-inner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 292px;
+  height: 252px;
+
+  top: 9px;
+
+  background: #f64b88;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 100%,
+    0% 100%
+  );
+
+  z-index: -1;
+}
+
+
+/* =========================================
+   CAUTION TITLE
+========================================= */
+
+.caution-title {
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: white;
+
+  margin-bottom: 9px;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   WHITE WARNING AREA
+========================================= */
+
+.falling-person {
+  width: 185px;
+  height: 95px;
+
+  position: relative;
+
+  background: white;
+
+  clip-path: polygon(
+    8% 0%,
+    92% 0%,
+    100% 15%,
+    94% 100%,
+    6% 100%,
+    0% 15%
+  );
+
+  margin-bottom: 8px;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   FALLING PERSON
+========================================= */
+
+.person-head {
+  width: 23px;
+  height: 23px;
+
+  position: absolute;
+
+  left: 53px;
+  top: 17px;
+
+  border-radius: 50%;
+
+  background: #f04482;
+}
+
+
+.person-body {
+  width: 12px;
+  height: 58px;
+
+  position: absolute;
+
+  left: 76px;
+  top: 27px;
+
+  border-radius: 8px;
+
+  background: #f04482;
+
+  transform: rotate(-55deg);
+}
+
+
+.person-arm {
+  width: 55px;
+  height: 11px;
+
+  position: absolute;
+
+  left: 66px;
+  top: 40px;
+
+  border-radius: 10px;
+
+  background: #f04482;
+
+  transform: rotate(25deg);
+}
+
+
+.person-leg {
+  width: 65px;
+  height: 11px;
+
+  position: absolute;
+
+  left: 95px;
+  top: 64px;
+
+  border-radius: 10px;
+
+  background: #f04482;
+
+  transform-origin: left center;
+}
+
+
+.leg-one {
+  transform: rotate(12deg);
+}
+
+
+.leg-two {
+  left: 86px;
+  top: 69px;
+
+  transform: rotate(145deg);
+}
+
+
+/* =========================================
+   LOVE TEXT
+========================================= */
+
+.caution-love-text {
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  letter-spacing: 0.5px;
+
+  text-align: center;
+
+  color: white;
+
+  z-index: 4;
+}
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+.caution-next {
+  margin-top: 22px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #542d35;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  padding: 5px 15px;
+
+  z-index: 10;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.caution-next:hover {
+  transform: translateY(-3px);
+
+  color: #d43e6d;
+}
+
+
+/* =========================================
+   BACKGROUND HEARTS
+========================================= */
+
+.caution-heart {
+  position: absolute;
+
+  font-family: "Dancing Script", cursive;
+
+  color: #ed4e83;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.heart-left {
+  left: 20%;
+
+  top: 37%;
+
+  font-size: 55px;
+
+  transform: rotate(-15deg);
+}
+
+
+.heart-left-small {
+  left: 27%;
+
+  top: 45%;
+
+  font-size: 27px;
+
+  transform: rotate(10deg);
+}
+
+
+.heart-right {
+  right: 20%;
+
+  top: 35%;
+
+  font-size: 58px;
+
+  transform: rotate(13deg);
+}
+
+
+.heart-right-small {
+  right: 27%;
+
+  top: 45%;
+
+  font-size: 28px;
+
+  transform: rotate(-10deg);
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.caution-star {
+  position: absolute;
+
+  color: #d94a76;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 30px;
+
+  z-index: 2;
+}
+
+
+.star-left {
+  left: 13%;
+  top: 25%;
+
+  transform: rotate(15deg);
+}
+
+
+.star-right {
+  right: 13%;
+  bottom: 28%;
+
+  transform: rotate(-15deg);
+}
+
+
+/* =========================================
+   DOODLE LINES
+========================================= */
+
+.caution-doodle {
+  position: absolute;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 55px;
+
+  color: #e95b88;
+
+  opacity: 0.75;
+
+  z-index: 1;
+}
+
+
+.doodle-left {
+  left: 9%;
+  bottom: 22%;
+
+  transform: rotate(-20deg);
+}
+
+
+.doodle-right {
+  right: 9%;
+  top: 24%;
+
+  transform: rotate(20deg);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .caution-screen {
+    background-size: 60px 60px;
+  }
+
+
+  .caution-sign {
+    width: 285px;
+    height: 250px;
+  }
+
+
+  .caution-sign-inner {
+    width: 267px;
+    height: 232px;
+
+    padding-top: 53px;
+  }
+
+
+  .caution-sign-inner::before {
+    width: 250px;
+    height: 215px;
+  }
+
+
+  .caution-title {
+    font-size: 21px;
+  }
+
+
+  .falling-person {
+    width: 155px;
+    height: 78px;
+  }
+
+
+  .caution-love-text {
+    font-size: 14px;
+  }
+
+
+  .heart-left {
+    left: 8%;
+    font-size: 38px;
+  }
+
+
+  .heart-right {
+    right: 8%;
+    font-size: 40px;
+  }
+
+
+  .star-left {
+    left: 5%;
+  }
+
+
+  .star-right {
+    right: 5%;
+  }
+
+
+  .doodle-left {
+    left: 3%;
+  }
+
+
+  .doodle-right {
+    right: 3%;
+  }
+
+}
+/* =====================================================
+   4. DECORATIVE WEBS
+===================================================== */
+
+.web {
+  position: fixed;
+
+  font-size: 4rem;
+
+  opacity: 0.7;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.web-top-left {
+  top: 20px;
+  left: 20px;
+
+  transform: rotate(-20deg);
+}
+
+.web-bottom-right {
+  right: 20px;
+  bottom: 20px;
+
+  transform: rotate(20deg);
+}
+
+
+/* =====================================================
+   5. ENVELOPE
+===================================================== */
+
+
+.envelope-screen {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5a1b5;
+
+  /* RED + PINK HORIZONTAL STRIPES */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      #d92842 0px,
+      #d92842 34px,
+      #f58da8 34px,
+      #f58da8 68px
+    );
+}
+
+
+/* =========================================
+   SOFT OVERLAY
+========================================= */
+
+.envelope-screen::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.18),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.envelope-star {
+  position: absolute;
+
+  color: #f6df64;
+
+  font-size: 42px;
+
+  text-shadow:
+    1px 2px 0 rgba(130, 40, 50, 0.15);
+
+  z-index: 2;
+
+  animation: starFloat 3s ease-in-out infinite;
+}
+
+.star-1 {
+  left: 13%;
+  top: 20%;
+
+  transform: rotate(-12deg);
+}
+
+.star-2 {
+  right: 15%;
+  top: 17%;
+
+  font-size: 50px;
+
+  transform: rotate(10deg);
+}
+
+.star-3 {
+  left: 8%;
+  bottom: 18%;
+
+  font-size: 35px;
+}
+
+.star-4 {
+  right: 10%;
+  bottom: 15%;
+
+  font-size: 44px;
+
+  transform: rotate(15deg);
+}
+
+.star-5 {
+  left: 24%;
+  bottom: 11%;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   HEARTS
+========================================= */
+
+.envelope-heart {
+  position: absolute;
+
+  color: #fff0f2;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 40px;
+
+  z-index: 2;
+}
+
+.heart-1 {
+  left: 21%;
+  top: 28%;
+
+  transform: rotate(-12deg);
+}
+
+.heart-2 {
+  right: 22%;
+  bottom: 27%;
+
+  transform: rotate(12deg);
+}
+
+
+/* =========================================
+   ENVELOPE WRAPPER
+========================================= */
+
+.envelope-wrapper {
+  position: relative;
+
+  width: 300px;
+  height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transform: rotate(-5deg);
+
+  transition: transform 0.3s ease;
+}
+
+.envelope-wrapper:hover {
+  transform:
+    rotate(-5deg)
+    translateY(-7px);
+}
+
+
+/* =========================================
+   ENVELOPE
+========================================= */
+
+.envelope {
+  width: 280px;
+  height: 190px;
+
+  position: relative;
+
+  background: #c9162d;
+
+  box-shadow:
+    8px 10px 0 rgba(105, 25, 35, 0.18),
+    0 15px 25px rgba(100, 25, 40, 0.22);
+}
+
+
+/* =========================================
+   ENVELOPE BODY
+========================================= */
+
+.envelope-body {
+  position: absolute;
+
+  inset: 0;
+
+  background: #d71932;
+
+  z-index: 2;
+
+  clip-path: polygon(
+    0 0,
+    50% 53%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+
+/* =========================================
+   ENVELOPE FLAP
+========================================= */
+
+.envelope-flap {
+  position: absolute;
+
+  width: 100%;
+  height: 125px;
+
+  top: 0;
+  left: 0;
+
+  background: #e32842;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  );
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   LETTER / NOTE
+========================================= */
+
+.envelope-letter {
+  position: absolute;
+
+  width: 205px;
+  height: 145px;
+
+  left: 50%;
+  top: -58px;
+
+  transform: translateX(-50%) rotate(-1deg);
+
+  background: #fff8d9;
+
+  padding: 25px 20px 15px;
+
+  z-index: 4;
+
+  box-shadow:
+    3px 4px 0 rgba(90, 40, 35, 0.10);
+
+  clip-path: polygon(
+    0 0,
+    95% 0,
+    100% 87%,
+    82% 100%,
+    0 92%
+  );
+}
+
+
+.envelope-letter span {
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+
+  color: #d62b3d;
+
+  font-size: 23px;
+}
+
+
+.envelope-letter p {
+  margin: 12px 0 0;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+
+  letter-spacing: 1px;
+
+  color: #40343a;
+}
+
+
+/* =========================================
+   OPEN NOW
+========================================= */
+
+.envelope-open {
+  position: relative;
+
+  margin-top: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  text-shadow:
+    0 2px 3px rgba(100, 20, 30, 0.25);
+
+  transition: transform 0.25s ease;
+}
+
+.envelope-open:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes starFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(5deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .envelope-screen {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        #d92842 0px,
+        #d92842 27px,
+        #f58da8 27px,
+        #f58da8 54px
+      );
+  }
+
+  .envelope-wrapper {
+    width: 270px;
+    height: 210px;
+  }
+
+  .envelope {
+    width: 250px;
+    height: 170px;
+  }
+
+  .envelope-letter {
+    width: 180px;
+    height: 125px;
+
+    top: -50px;
+
+    padding: 20px 15px;
+  }
+
+  .envelope-letter p {
+    font-size: 14px;
+  }
+
+  .envelope-star {
+    font-size: 30px;
+  }
+
+  .star-2 {
+    font-size: 38px;
+  }
+
+  .star-4 {
+    font-size: 34px;
+  }
+}
+
+/* =====================================================
+   6. LOVE LETTER
+===================================================== */
+
+.opened-letter {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 50px 25px;
+
+  background: #fff8f2;
+}
+
+.letter-icon {
+  font-size: 3rem;
+
+  margin-bottom: 15px;
+}
+
+.opened-letter h2 {
+  font-family: "Pacifico", cursive;
+
+  font-size: 2.4rem;
+
+  color: #70483f;
+
+  margin-bottom: 25px;
+}
+
+.opened-letter p {
+  max-width: 600px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: #72554e;
+
+  margin-bottom: 15px;
+}
+
+.letter-ending {
+  font-family: "Pacifico", cursive;
+
+  font-size: 1.2rem !important;
+
+  margin-top: 20px;
+}
+
+.memories-button,
+.reasons-button,
+.collage-button {
+  margin-top: 25px;
+
+  padding: 13px 25px;
+
+  border-radius: 30px;
+
+  background: #d9908e;
+
+  color: white;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 6px 15px rgba(91, 59, 53, 0.15);
+
+  transition: 0.3s;
+}
+
+.memories-button:hover,
+.reasons-button:hover,
+.collage-button:hover {
+  transform: translateY(-3px);
+
+  background: #c97f7d;
+}
+/* =========================================
+   PAGE 5 — LOVE LETTER
+========================================= */
+
+.letter-screen {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background-color: #f6d9dd;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.42) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.42) 50%,
+      transparent 50%
+    );
+
+  background-size: 55px 55px;
+}
+
+
+/* =========================================
+   LETTER PAPER
+========================================= */
+
+.love-letter {
+  width: min(620px, 88vw);
+  min-height: 600px;
+
+  position: relative;
+  z-index: 5;
+
+  padding: 65px 65px 50px;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.45) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(211, 159, 159, 0.13) 1px,
+      transparent 1px
+    ),
+    #fff8e9;
+
+  background-size:
+    100% 25px,
+    25px 100%,
+    auto;
+
+  border: 1px solid #e6c9b9;
+
+  box-shadow:
+    8px 10px 0 rgba(132, 64, 72, 0.10),
+    0 18px 35px rgba(100, 50, 55, 0.16);
+
+  transform: rotate(-1deg);
+
+  animation: letterAppear 0.7s ease forwards;
+}
+
+
+/* =========================================
+   INNER BORDER
+========================================= */
+
+.love-letter::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 16px;
+
+  border: 1px dashed rgba(171, 91, 99, 0.28);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TAPE
+========================================= */
+
+.letter-tape {
+  position: absolute;
+
+  width: 120px;
+  height: 27px;
+
+  top: -13px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #e8adb2 0px,
+      #e8adb2 14px,
+      #f2c5c8 14px,
+      #f2c5c8 28px
+    );
+
+  z-index: 10;
+}
+
+
+/* =========================================
+   SMALL HEADING
+========================================= */
+
+.letter-small-title {
+  position: relative;
+  z-index: 3;
+
+  margin-bottom: 13px;
+
+  text-align: center;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #a45b64;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.letter-title {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 28px;
+
+  text-align: center;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 43px;
+
+  font-weight: 500;
+
+  color: #783d46;
+}
+
+
+/* =========================================
+   LETTER CONTENT
+========================================= */
+
+.letter-content {
+  position: relative;
+  z-index: 3;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 22px;
+
+  line-height: 1.55;
+
+  color: #69434a;
+}
+
+
+.letter-content p {
+  margin-bottom: 16px;
+}
+
+
+/* =========================================
+   ENDING
+========================================= */
+
+.letter-ending {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-size: 27px;
+
+  color: #a24857;
+}
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.letter-signature {
+  position: relative;
+  z-index: 3;
+
+  margin-top: 20px;
+
+  text-align: right;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  color: #86444e;
+}
+
+
+.letter-signature span {
+  font-size: 27px;
+
+  color: #d94e69;
+}
+
+
+/* =========================================
+   BOTTOM DOODLE
+========================================= */
+
+.letter-bottom-doodle {
+  position: relative;
+  z-index: 3;
+
+  margin-top: 22px;
+
+  text-align: center;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 18px;
+
+  color: #c06b76;
+}
+
+
+/* =========================================
+   BACKGROUND HEARTS
+========================================= */
+
+.letter-sticker {
+  position: absolute;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.letter-heart {
+  font-family: "Dancing Script", cursive;
+
+  font-size: 55px;
+
+  color: #d85a70;
+}
+
+
+.heart-one {
+  left: 13%;
+  top: 20%;
+
+  transform: rotate(-15deg);
+}
+
+
+.heart-two {
+  right: 13%;
+  bottom: 21%;
+
+  transform: rotate(13deg);
+}
+
+
+/* =========================================
+   BACKGROUND STARS
+========================================= */
+
+.letter-star {
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 34px;
+
+  color: #b85a68;
+}
+
+
+.star-one {
+  left: 20%;
+  bottom: 25%;
+
+  transform: rotate(12deg);
+}
+
+
+.star-two {
+  right: 20%;
+  top: 20%;
+
+  transform: rotate(-12deg);
+}
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+.letter-next {
+  position: relative;
+  z-index: 10;
+
+  margin-top: 22px;
+
+  padding: 11px 26px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #a94f59;
+
+  color: white;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #793b43,
+    0 8px 15px rgba(100, 45, 55, 0.16);
+
+  transition: 0.25s ease;
+}
+
+
+.letter-next:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 0 #793b43,
+    0 12px 20px rgba(100, 45, 55, 0.20);
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes letterAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      rotate(-1deg);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      rotate(-1deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .letter-screen {
+    padding: 30px 15px;
+  }
+
+  .love-letter {
+    width: 92vw;
+
+    min-height: 570px;
+
+    padding:
+      55px
+      35px
+      40px;
+  }
+
+  .letter-title {
+    font-size: 34px;
+  }
+
+  .letter-content {
+    font-size: 19px;
+  }
+
+  .letter-ending {
+    font-size: 23px;
+  }
+
+  .letter-heart {
+    font-size: 35px;
+  }
+
+  .letter-star {
+    font-size: 23px;
+  }
+}
+
+/* =========================================
+   SMALL REALISTIC LIPSTICK PRINTS
+========================================= */
+
+.kiss-print {
+  position: absolute;
+
+  width: 62px;
+  height: 40px;
+
+  z-index: 8;
+
+  pointer-events: none;
+
+  opacity: 0.48;
+
+  mix-blend-mode: multiply;
+
+  filter:
+    saturate(1.15)
+    contrast(1.05);
+}
+
+
+/* TOP LIP */
+
+.lip-top {
+  position: absolute;
+
+  width: 53px;
+  height: 21px;
+
+  left: 5px;
+  top: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b52b3b,
+      #d94350 35%,
+      #c22d3e 65%,
+      #a92132
+    );
+
+  clip-path: polygon(
+    0 60%,
+    10% 42%,
+    23% 35%,
+    36% 43%,
+    48% 15%,
+    53% 40%,
+    62% 15%,
+    75% 43%,
+    88% 35%,
+    100% 48%,
+    93% 70%,
+    77% 78%,
+    62% 74%,
+    51% 63%,
+    39% 74%,
+    23% 78%,
+    9% 72%
+  );
+}
+
+
+/* BOTTOM LIP */
+
+.lip-bottom {
+  position: absolute;
+
+  width: 55px;
+  height: 19px;
+
+  left: 4px;
+  top: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #a92335,
+      #d83d4c 40%,
+      #c32b3d 70%,
+      #a51f30
+    );
+
+  clip-path: polygon(
+    3% 18%,
+    18% 8%,
+    35% 23%,
+    50% 29%,
+    65% 23%,
+    82% 8%,
+    97% 18%,
+    90% 55%,
+    76% 78%,
+    60% 91%,
+    50% 96%,
+    40% 91%,
+    24% 78%,
+    10% 55%
+  );
+}
+
+
+/* GAP BETWEEN LIPS */
+
+.lip-gap {
+  position: absolute;
+
+  width: 40px;
+  height: 4px;
+
+  left: 11px;
+  top: 20px;
+
+  background: #fff8e9;
+
+  border-radius: 50%;
+
+  z-index: 3;
+}
+
+
+/* subtle uneven lipstick texture */
+
+.kiss-print::before {
+  content: "";
+
+  position: absolute;
+
+  width: 57px;
+  height: 34px;
+
+  left: 2px;
+  top: 2px;
+
+  background:
+    repeating-linear-gradient(
+      100deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(255, 185, 190, 0.25) 4px,
+      transparent 6px
+    );
+
+  opacity: 0.7;
+
+  z-index: 5;
+
+  clip-path: polygon(
+    0 30%,
+    20% 5%,
+    40% 15%,
+    50% 5%,
+    60% 15%,
+    80% 5%,
+    100% 30%,
+    90% 70%,
+    70% 95%,
+    50% 100%,
+    30% 95%,
+    10% 70%
+  );
+}
+
+
+/* =========================================
+   POSITIONS
+========================================= */
+
+/* small print near upper-left */
+
+.kiss-1 {
+  top: 86px;
+  left: 48px;
+
+  transform: rotate(-14deg) scale(0.85);
+}
+
+
+/* small print near upper-right */
+
+.kiss-2 {
+  top: 92px;
+  right: 48px;
+
+  transform: rotate(11deg) scale(0.78);
+
+  opacity: 0.42;
+}
+
+
+/* middle-right */
+
+.kiss-3 {
+  top: 53%;
+  right: 38px;
+
+  transform: rotate(-9deg) scale(0.72);
+
+  opacity: 0.38;
+}
+
+
+/* bottom-left */
+
+.kiss-4 {
+  bottom: 52px;
+  left: 48px;
+
+  transform: rotate(8deg) scale(0.8);
+
+  opacity: 0.40;
+}
+
+/* =====================================================
+   7. MEMORIES
+===================================================== */
+
+
+
+.memories-screen {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #a9d5e5;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.42) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(255,255,255,0.42) 50%,
+      transparent 50%
+    );
+
+  background-size: 72px 72px;
+}
+
+
+/* =========================================
+   CENTER PAPER
+========================================= */
+
+.memory-center-card {
+  width: 330px;
+  min-height: 390px;
+
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 50px 30px 35px;
+
+  background:
+    linear-gradient(
+      rgba(190, 150, 125, 0.10) 1px,
+      transparent 1px
+    ),
+    #fff8df;
+
+  background-size: 100% 24px;
+
+  border: 1px solid #e7d5b9;
+
+  box-shadow:
+    7px 9px 0 rgba(54, 91, 104, 0.13),
+    0 14px 25px rgba(40, 80, 95, 0.15);
+
+  transform: rotate(1deg);
+}
+
+
+/* =========================================
+   INNER BORDER
+========================================= */
+
+.memory-center-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border: 2px dashed rgba(75, 120, 135, 0.25);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TAPE
+========================================= */
+
+.memory-tape {
+  position: absolute;
+
+  width: 105px;
+  height: 25px;
+
+  top: -12px;
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #e7c5a7 0px,
+      #e7c5a7 13px,
+      #f2d7bc 13px,
+      #f2d7bc 26px
+    );
+
+  z-index: 12;
+}
+
+
+/* =========================================
+   SMALL HEADING
+========================================= */
+
+.memory-small-heading {
+  position: relative;
+
+  z-index: 3;
+
+  margin-bottom: 17px;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #597c87;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.memory-center-card h1 {
+  position: relative;
+
+  z-index: 3;
+
+  margin: 0;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 39px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  color: #365f6b;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.memory-divider {
+  position: relative;
+
+  z-index: 3;
+
+  margin: 15px 0;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 20px;
+
+  color: #db6375;
+}
+
+
+/* =========================================
+   CENTER MESSAGE
+========================================= */
+
+.memory-center-card p {
+  position: relative;
+
+  z-index: 3;
+
+  margin: 0;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  color: #405f67;
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+========================================= */
+
+.memory-bottom {
+  position: relative;
+
+  z-index: 3;
+
+  margin-top: 25px;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 18px;
+
+  color: #d26070;
+}
+
+
+/* =========================================
+   PHOTOS
+========================================= */
+
+.memory-photo {
+  position: absolute;
+
+  width: 190px;
+
+  padding: 8px 8px 18px;
+
+  background: #fffdf7;
+
+  z-index: 5;
+
+  box-shadow:
+    5px 7px 0 rgba(50, 80, 90, 0.13),
+    0 10px 20px rgba(40, 70, 80, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    z-index 0.3s ease;
+}
+
+
+.memory-photo img {
+  display: block;
+
+  width: 100%;
+  height: 205px;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   LEFT PHOTOS
+========================================= */
+
+.photo-1 {
+  left: 9%;
+  top: 10%;
+
+  transform: rotate(-9deg);
+}
+
+
+.photo-2 {
+  left: 12%;
+  bottom: 8%;
+
+  transform: rotate(7deg);
+}
+
+
+/* =========================================
+   RIGHT PHOTOS
+========================================= */
+
+.photo-3 {
+  right: 9%;
+  top: 11%;
+
+  transform: rotate(8deg);
+}
+
+
+.photo-4 {
+  right: 12%;
+  bottom: 8%;
+
+  transform: rotate(-7deg);
+}
+
+
+/* =========================================
+   PHOTO HOVER
+========================================= */
+
+.memory-photo:hover {
+  z-index: 20;
+
+  transform:
+    rotate(0deg)
+    scale(1.04);
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.memory-star {
+  position: absolute;
+
+  z-index: 2;
+
+  color: #f4d34e;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 30px;
+
+  text-shadow:
+    1px 2px 0 rgba(70, 90, 80, 0.15);
+}
+
+
+.ms-1 {
+  left: 5%;
+  top: 18%;
+
+  transform: rotate(-12deg);
+}
+
+
+.ms-2 {
+  left: 28%;
+  bottom: 10%;
+
+  font-size: 25px;
+}
+
+
+.ms-3 {
+  right: 28%;
+  top: 12%;
+
+  font-size: 26px;
+}
+
+
+.ms-4 {
+  right: 5%;
+  bottom: 18%;
+
+  transform: rotate(12deg);
+}
+
+
+.ms-5 {
+  left: 4%;
+  bottom: 42%;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+.memory-next {
+  position: absolute;
+
+  bottom: 25px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 30;
+
+  border: none;
+
+  background: transparent;
+
+  color: #365b66;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+
+.memory-next:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+
+  color: #d35368;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .memory-center-card {
+    width: 260px;
+    min-height: 330px;
+
+    padding: 45px 20px 30px;
+  }
+
+  .memory-center-card h1 {
+    font-size: 31px;
+  }
+
+  .memory-center-card p {
+    font-size: 22px;
+  }
+
+  .memory-photo {
+    width: 120px;
+
+    padding: 5px 5px 12px;
+  }
+
+  .memory-photo img {
+    height: 130px;
+  }
+
+  .photo-1 {
+    left: 3%;
+    top: 10%;
+  }
+
+  .photo-2 {
+    left: 3%;
+    bottom: 9%;
+  }
+
+  .photo-3 {
+    right: 3%;
+    top: 10%;
+  }
+
+  .photo-4 {
+    right: 3%;
+    bottom: 9%;
+  }
+
+  .memory-star {
+    font-size: 20px;
+  }
+}
+/* =========================================
+   EXTRA 4 MEMORY SNAPS
+========================================= */
+
+.photo-5 {
+  position: absolute;
+
+  left: 22%;
+  top: 7%;
+
+  width: 135px;
+
+  transform: rotate(-12deg);
+
+  z-index: 4;
+}
+
+.photo-6 {
+  position: absolute;
+
+  right: 22%;
+  top: 8%;
+
+  width: 135px;
+
+  transform: rotate(11deg);
+
+  z-index: 4;
+}
+
+.photo-7 {
+  position: absolute;
+
+  left: 23%;
+  bottom: 7%;
+
+  width: 135px;
+
+  transform: rotate(9deg);
+
+  z-index: 4;
+}
+
+.photo-8 {
+  position: absolute;
+
+  right: 23%;
+  bottom: 7%;
+
+  width: 135px;
+
+  transform: rotate(-11deg);
+
+  z-index: 4;
+}
+
+
+.photo-5 img,
+.photo-6 img,
+.photo-7 img,
+.photo-8 img {
+  width: 100%;
+  height: 145px;
+
+  object-fit: cover;
+
+  display: block;
+}
+/* =====================================================
+   PAGE 8 — 10 THINGS I LOVE ABOUT YOU
+   RED PINTEREST SCRAPBOOK
+===================================================== */
+
+.ten-things-page {
+
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns: 42% 58%;
+
+  align-items: center;
+
+  padding: 35px 4vw 75px;
+
+  background-color: #b9172e;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.08) 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 24px 24px;
+
+  color: #fff8ee;
+}
+
+
+/* =====================================================
+   LEFT SECTION
+===================================================== */
+
+.ten-things-left {
+
+  position: relative;
+
+  height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 5;
+}
+
+
+/* =====================================================
+   HUGE TITLE
+===================================================== */
+
+.ten-things-main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 0;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: clamp(4.2rem, 6.7vw, 7.2rem);
+
+  font-weight: 900;
+
+  line-height: 0.87;
+
+  letter-spacing: -4px;
+
+  color: #fff8ee;
+
+  text-shadow:
+    5px 7px 0 rgba(82, 0, 12, 0.35);
+
+  transform: translateY(-35px);
+}
+
+
+/* =====================================================
+   HEART BESIDE TITLE
+===================================================== */
+
+.ten-title-heart {
+
+  position: absolute;
+
+  right: 4%;
+
+  bottom: 145px;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 6rem;
+
+  color: #fff7ee;
+
+  transform: rotate(-12deg);
+
+  text-shadow:
+    3px 4px 0 rgba(80, 0, 10, 0.18);
+}
+
+
+/* =====================================================
+   TITLE SPARKLES
+===================================================== */
+
+.ten-title-sparkle {
+
+  position: absolute;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  color: #fff8ee;
+
+  font-size: 2.5rem;
+}
+
+
+.sparkle-a {
+
+  top: 17%;
+
+  right: 9%;
+
+  transform: rotate(12deg);
+}
+
+
+.sparkle-b {
+
+  bottom: 28%;
+
+  left: 8%;
+
+  transform: rotate(-15deg);
+}
+
+
+/* =====================================================
+   LEFT HANDWRITTEN NOTES
+===================================================== */
+
+.ten-side-note {
+
+  position: absolute;
+
+  top: 9%;
+
+  left: 4%;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.5rem;
+
+  line-height: 1.05;
+
+  color: #fff4e8;
+
+  transform: rotate(-8deg);
+
+  text-align: center;
+}
+
+
+.lucky-note {
+
+  top: auto;
+
+  bottom: 5%;
+
+  left: 7%;
+
+  padding: 13px 20px;
+
+  background: #e8a2a1;
+
+  color: #7d2430;
+
+  transform: rotate(-5deg);
+
+  box-shadow:
+    4px 5px 0 rgba(75,0,10,0.15);
+}
+
+
+.ten-things-paper {
+  width: min(720px, 100%);
+  min-height: 620px;
+
+  position: relative;
+  z-index: 6;
+
+  padding: 55px 50px 45px;
+
+  background-color: #fff7df;
+
+  color: #292321;
+
+  transform: rotate(-1.2deg);
+
+  box-shadow:
+    10px 12px 0 rgba(70, 0, 10, 0.25),
+    0 20px 35px rgba(70, 0, 10, 0.22);
+}
+
+/* =====================================================
+   TAPE
+===================================================== */
+
+.paper-tape {
+
+  position: absolute;
+
+  z-index: 10;
+
+  top: -17px;
+
+  left: 50%;
+
+  width: 130px;
+
+  height: 32px;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #e9c9ae 0 13px,
+      #f5dcc1 13px 26px
+    );
+
+  box-shadow:
+    0 3px 5px rgba(70,40,20,0.12);
+}
+
+
+/* =====================================================
+   AIRMAIL BORDER
+===================================================== */
+
+.airmail-border {
+
+  position: absolute;
+
+  inset: 12px;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  border: 9px solid transparent;
+
+  border-image:
+    repeating-linear-gradient(
+      135deg,
+      #df4050 0 23px,
+      #fff7df 23px 37px,
+      #438cc5 37px 60px,
+      #fff7df 60px 74px
+    )
+    9;
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+ .ten-things-list {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+
+  padding: 5px 12px;
+}
+
+/* =====================================================
+   EACH ITEM
+===================================================== */
+
+.ten-thing {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding-bottom: 11px;
+
+  border-bottom:
+    1px dashed
+    rgba(170,80,70,0.25);
+}
+
+
+.ten-thing span {
+
+  flex-shrink: 0;
+
+  min-width: 38px;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.55rem;
+
+  font-weight: 600;
+
+  color: #b8333b;
+
+  line-height: 1.25;
+}
+
+
+.ten-thing p {
+  margin: 0;
+
+  font-family:
+    "Patrick Hand",
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.25rem;
+  line-height: 1.15;
+  letter-spacing: 0.3px;
+
+  color: #292321;
+}
+/* =====================================================
+   HEART ON PAPER
+===================================================== */
+
+.paper-heart {
+
+  position: absolute;
+
+  right: 8%;
+
+  top: 30%;
+
+  z-index: 8;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 3.5rem;
+
+  color: #b72b3b;
+
+  transform: rotate(10deg);
+}
+
+
+/* =====================================================
+   RIGHT SIDE NOTE
+===================================================== */
+
+.ten-right-note {
+
+  position: absolute;
+
+  right: 1.2%;
+
+  top: 37%;
+
+  z-index: 8;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.45rem;
+
+  line-height: 1.05;
+
+  text-align: center;
+
+  color: #fff4e9;
+
+  transform: rotate(-7deg);
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.ten-page-heart {
+
+  position: absolute;
+
+  z-index: 7;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  color: #fff6eb;
+
+  font-size: 3.5rem;
+
+  pointer-events: none;
+}
+
+
+.heart-one {
+
+  left: 3%;
+
+  bottom: 29%;
+
+  transform: rotate(-15deg);
+}
+
+
+.heart-two {
+
+  right: 3%;
+
+  bottom: 9%;
+
+  font-size: 4rem;
+
+  transform: rotate(13deg);
+}
+
+
+/* =====================================================
+   FLOATING SPARKLES
+===================================================== */
+
+.ten-page-sparkle {
+
+  position: absolute;
+
+  z-index: 7;
+
+  color: #fff5ea;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 2.4rem;
+}
+
+
+.star-one {
+
+  top: 10%;
+
+  left: 38%;
+
+  transform: rotate(15deg);
+}
+
+
+.star-two {
+
+  bottom: 8%;
+
+  left: 45%;
+
+  transform: rotate(-10deg);
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.ten-things-next {
+
+  position: absolute;
+
+  z-index: 30;
+
+  bottom: 18px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  padding:
+    12px 27px;
+
+  border-radius: 30px;
+
+  background: #fff7ed;
+
+  color: #a7192d;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 0 #74101e,
+    0 8px 16px rgba(50,0,5,0.25);
+
+  transition: 0.25s ease;
+}
+
+
+.ten-things-next:hover {
+
+  transform:
+    translateX(-50%)
+    translateY(-3px)
+    rotate(-1deg);
+}
+
+
+.ten-things-next:active {
+
+  transform:
+    translateX(-50%)
+    translateY(2px);
+
+  box-shadow:
+    0 3px 0 #74101e;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .ten-things-page {
+
+    grid-template-columns: 38% 62%;
+
+    padding:
+      30px 2vw 75px;
+  }
+
+
+  .ten-things-main-title {
+
+    font-size:
+      clamp(
+        3.5rem,
+        6vw,
+        5.5rem
+      );
+  }
+
+
+  .ten-things-paper {
+
+    min-height: 650px;
+
+    padding:
+      60px 45px 50px;
+  }
+
+
+  .ten-thing p {
+
+    font-size: 1.18rem;
+  }
+
+
+  .ten-side-note,
+  .ten-right-note {
+
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .ten-things-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 25px;
+
+    padding:
+      45px 15px 90px;
+  }
+
+
+  .ten-things-left {
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 200px;
+
+    justify-content: center;
+  }
+
+
+  .ten-things-main-title {
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size:
+      clamp(
+        3rem,
+        13vw,
+        5rem
+      );
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+  }
+
+
+  .ten-title-heart,
+  .ten-title-sparkle {
+
+    display: none;
+  }
+
+
+  .ten-things-paper {
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding:
+      55px 24px 45px;
+
+    margin: 0;
+
+    transform: rotate(-0.6deg);
+  }
+
+
+  .airmail-border {
+
+    inset: 8px;
+
+    border-width: 7px;
+  }
+
+
+  .ten-things-list {
+
+    padding:
+      5px 8px;
+
+    gap: 9px;
+  }
+
+
+  .ten-thing {
+
+    gap: 9px;
+
+    padding-bottom: 8px;
+  }
+
+
+  .ten-thing span {
+
+    min-width: 25px;
+
+    font-size: 1.15rem;
+  }
+
+
+  .ten-thing p {
+
+    font-size: 1rem;
+
+    line-height: 1.2;
+  }
+
+
+  .paper-heart {
+
+    display: none;
+  }
+
+
+  .ten-page-heart,
+  .ten-page-sparkle {
+
+    display: none;
+  }
+
+
+  .ten-things-next {
+
+    bottom: 18px;
+
+    font-size: 0.75rem;
+
+    padding:
+      11px 22px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .ten-things-page {
+
+    padding:
+      35px 10px 85px;
+  }
+
+
+  .ten-things-main-title {
+
+    font-size: 2.7rem;
+  }
+
+
+  .ten-things-paper {
+
+    padding:
+      50px 17px 40px;
+  }
+
+
+  .ten-thing p {
+
+    font-size: 0.9rem;
+  }
+
+}
+/* =====================================================
+   PAGE 9 — BIG SCRAPBOOK COLLAGE
+   BLUE + BUTTER YELLOW GINGHAM
+===================================================== */
+
+.scrapbook-collage-page {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 6vw 90px;
+
+  background-color: #f8e7aa;
+
+  background-image:
+    linear-gradient(
+      rgba(91, 151, 194, 0.28) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(91, 151, 194, 0.28) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      rgba(255,255,255,0.28) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.28) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    56px 56px,
+    56px 56px,
+    14px 14px,
+    14px 14px;
+
+  color: #49332d;
+}
+
+
+/* =====================================================
+   TOP LABEL
+===================================================== */
+
+.collage-label {
+  position: absolute;
+
+  top: 30px;
+  left: 7%;
+
+  z-index: 20;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  color: #5a6f82;
+
+  transform: rotate(-4deg);
+}
+
+
+/* =====================================================
+   PHOTO STRIPS
+===================================================== */
+
+.photo-strip {
+  position: absolute;
+
+  width: 235px;
+
+  padding: 14px 14px 22px;
+
+  background: #fffdf5;
+
+  box-shadow:
+    7px 9px 0 rgba(74, 57, 45, 0.16),
+    0 14px 28px rgba(70, 50, 35, 0.18);
+
+  z-index: 8;
+}
+
+
+/* LEFT STRIP */
+
+.strip-left {
+  left: 7%;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(-5deg);
+}
+
+
+/* RIGHT STRIP */
+
+.strip-right {
+  right: 7%;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(5deg);
+}
+
+
+/* =====================================================
+   TAPE
+===================================================== */
+
+.strip-tape {
+  position: absolute;
+
+  width: 105px;
+  height: 30px;
+
+  top: -17px;
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #e9c9ae 0 12px,
+      #f5dfc8 12px 24px
+    );
+
+  opacity: 0.9;
+
+  box-shadow:
+    0 3px 5px rgba(70,40,20,0.12);
+
+  z-index: 10;
+}
+
+
+/* =====================================================
+   STRIP PHOTOS
+===================================================== */
+
+.strip-photo {
+  width: 100%;
+
+  aspect-ratio: 1 / 0.82;
+
+  overflow: hidden;
+
+  margin-bottom: 9px;
+
+  background: #eee7da;
+
+  border: 4px solid #fffdf5;
+}
+
+
+.strip-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+
+.photo-strip:hover .strip-photo img {
+  transform: scale(1.035);
+}
+
+
+/* =====================================================
+   STRIP CAPTION
+===================================================== */
+
+.strip-caption {
+  padding-top: 2px;
+
+  text-align: center;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.15rem;
+
+  color: #694a42;
+}
+
+
+/* =====================================================
+   CENTER PAPER
+===================================================== */
+
+.collage-center-paper {
+  position: relative;
+
+  width: min(530px, 42vw);
+  min-height: 520px;
+
+  z-index: 12;
+
+  padding: 30px;
+
+  background: #fff8df;
+
+  transform: rotate(-1.5deg);
+
+  box-shadow:
+    10px 12px 0 rgba(74, 57, 45, 0.17),
+    0 20px 35px rgba(70, 50, 35, 0.22);
+}
+
+
+/* PAPER TEXTURE */
+
+.collage-center-paper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.14;
+
+  background-image:
+    radial-gradient(
+      rgba(80,50,30,0.5) 0.6px,
+      transparent 0.8px
+    );
+
+  background-size: 7px 7px;
+}
+
+
+/* =====================================================
+   CENTER PAPER TAPE
+===================================================== */
+
+.center-tape {
+  position: absolute;
+
+  width: 130px;
+  height: 32px;
+
+  top: -16px;
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #8eb4d1 0 13px,
+      #b7cee0 13px 26px
+    );
+
+  opacity: 0.85;
+
+  z-index: 15;
+}
+
+
+/* =====================================================
+   CENTER CONTENT
+===================================================== */
+
+.center-paper-inner {
+  position: relative;
+
+  z-index: 5;
+
+  min-height: 460px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.center-small-title {
+  margin-bottom: 25px;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #a66b62;
+}
+
+
+.center-paper-inner h1 {
+  margin: 0 0 25px;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 3.5rem;
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  color: #b0444d;
+}
+
+
+.center-paper-inner h1 span {
+  font-size: 4rem;
+
+  color: #a83745;
+}
+
+
+.center-paper-inner > p {
+  margin: 0;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 1.1rem;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  color: #55413a;
+}
+
+
+.center-message {
+  margin-top: 22px !important;
+
+  font-family:
+    "Patrick Hand",
+    "Dancing Script",
+    cursive !important;
+
+  font-size: 1.18rem !important;
+
+  line-height: 1.45 !important;
+
+  color: #71534a !important;
+}
+
+
+.center-sign {
+  align-self: flex-end;
+
+  margin-top: 22px;
+
+  margin-right: 25px;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.3rem;
+
+  color: #9b4a51;
+
+  transform: rotate(-3deg);
+}
+
+
+/* =====================================================
+   SCRAPBOOK NOTES
+===================================================== */
+
+.collage-note {
+  position: absolute;
+
+  z-index: 14;
+
+  width: 145px;
+
+  padding: 18px 14px;
+
+  text-align: center;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.25rem;
+
+  line-height: 1.1;
+
+  box-shadow:
+    5px 7px 0 rgba(70,45,30,0.13);
+
+  color: #654b42;
+}
+
+
+/* NOTE 1 */
+
+.note-one {
+  top: 13%;
+  left: 28%;
+
+  background: #fff0a9;
+
+  transform: rotate(-5deg);
+}
+
+
+/* NOTE 2 */
+
+.note-two {
+  top: 15%;
+  right: 28%;
+
+  background: #f5c6c1;
+
+  transform: rotate(5deg);
+}
+
+
+/* NOTE 3 */
+
+.note-three {
+  bottom: 15%;
+  left: 27%;
+
+  background: #cbddeb;
+
+  transform: rotate(4deg);
+}
+
+
+/* NOTE 4 */
+
+.note-four {
+  bottom: 15%;
+  right: 27%;
+
+  background: #ffd5a5;
+
+  transform: rotate(-5deg);
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+.collage-heart {
+  position: absolute;
+
+  z-index: 18;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  color: #a93643;
+
+  pointer-events: none;
+}
+
+
+.collage-heart-one {
+  top: 12%;
+  left: 47%;
+
+  font-size: 3rem;
+
+  transform: rotate(-12deg);
+}
+
+
+.collage-heart-two {
+  bottom: 12%;
+  left: 8%;
+
+  font-size: 3.5rem;
+
+  color: #557fa4;
+
+  transform: rotate(-15deg);
+}
+
+
+.collage-heart-three {
+  right: 10%;
+  bottom: 18%;
+
+  font-size: 3rem;
+
+  transform: rotate(12deg);
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.collage-sparkle {
+  position: absolute;
+
+  z-index: 18;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 2.2rem;
+
+  color: #a85c4e;
+
+  pointer-events: none;
+}
+
+
+.sparkle-one {
+  top: 23%;
+  left: 19%;
+
+  transform: rotate(15deg);
+}
+
+
+.sparkle-two {
+  top: 11%;
+  right: 18%;
+
+  color: #557fa4;
+
+  transform: rotate(-10deg);
+}
+
+
+.sparkle-three {
+  bottom: 22%;
+  right: 19%;
+
+  transform: rotate(8deg);
+}
+
+
+/* =====================================================
+   STICKERS
+===================================================== */
+
+.collage-sticker {
+  position: absolute;
+
+  z-index: 20;
+
+  font-size: 2.5rem;
+
+  filter:
+    drop-shadow(
+      3px 4px 2px rgba(60,40,30,0.18)
+    );
+
+  pointer-events: none;
+}
+
+
+.teddy {
+  top: 7%;
+  left: 37%;
+}
+
+
+.flower {
+  bottom: 8%;
+  left: 44%;
+
+  font-size: 2.3rem;
+}
+
+
+.cherry {
+  top: 40%;
+  right: 2%;
+
+  font-size: 2.5rem;
+
+  transform: rotate(8deg);
+}
+
+
+/* =====================================================
+   SUBTLE SPIDER-MAN WEB
+===================================================== */
+
+.collage-web {
+  position: absolute;
+
+  top: 5%;
+  right: 5%;
+
+  z-index: 20;
+
+  font-size: 3.3rem;
+
+  opacity: 0.55;
+
+  transform: rotate(12deg);
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.collage-next {
+  position: absolute;
+
+  z-index: 50;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 12px 27px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #fff8e8;
+
+  color: #9f3743;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #70434a,
+    0 8px 16px rgba(50,0,5,0.2);
+
+  transition: 0.25s ease;
+}
+
+
+.collage-next:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px)
+    rotate(-1deg);
+}
+
+
+.collage-next:active {
+  transform:
+    translateX(-50%)
+    translateY(2px);
+
+  box-shadow:
+    0 3px 0 #70434a;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .scrapbook-collage-page {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .photo-strip {
+    width: 190px;
+  }
+
+  .strip-left {
+    left: 3%;
+  }
+
+  .strip-right {
+    right: 3%;
+  }
+
+  .collage-center-paper {
+    width: min(460px, 44vw);
+  }
+
+  .collage-note {
+    width: 120px;
+    font-size: 1.05rem;
+  }
+
+  .note-one {
+    left: 22%;
+  }
+
+  .note-two {
+    right: 22%;
+  }
+
+  .note-three {
+    left: 21%;
+  }
+
+  .note-four {
+    right: 21%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .scrapbook-collage-page {
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    gap: 30px;
+
+    padding:
+      60px 18px 100px;
+  }
+
+
+  .collage-label {
+    top: 20px;
+    left: 20px;
+  }
+
+
+  .photo-strip {
+    position: relative;
+
+    width: min(270px, 82vw);
+
+    top: auto;
+    left: auto;
+    right: auto;
+
+    transform: rotate(-3deg);
+  }
+
+
+  .strip-right {
+    transform: rotate(3deg);
+  }
+
+
+  .collage-center-paper {
+    order: -1;
+
+    width: min(470px, 90vw);
+
+    min-height: 480px;
+  }
+
+
+  .collage-note,
+  .collage-heart,
+  .collage-sparkle,
+  .collage-sticker,
+  .collage-web {
+    display: none;
+  }
+
+
+  .center-paper-inner h1 {
+    font-size: 3rem;
+  }
+
+
+  .center-paper-inner h1 span {
+    font-size: 3.4rem;
+  }
+
+
+  .center-paper-inner > p {
+    font-size: 1rem;
+  }
+
+
+  .center-message {
+    font-size: 1.05rem !important;
+  }
+
+
+  .collage-next {
+    bottom: 18px;
+
+    font-size: 0.75rem;
+
+    padding:
+      11px 22px;
+  }
+}
+
+/* =====================================================
+   LOVE CARD
+   SIMPLE HANDMADE RED CARD
+===================================================== */
+
+.uno-card {
+  position: relative;
+
+  width: 300px;
+  height: 430px;
+
+  padding: 13px;
+
+  background: #fff8e8;
+
+  border-radius: 4px;
+
+  box-shadow:
+    8px 10px 0 rgba(75, 20, 25, 0.22),
+    0 18px 30px rgba(70, 15, 20, 0.2);
+
+  transform: rotate(-2deg);
+
+  z-index: 10;
+}
+
+
+/* =====================================================
+   TAPE
+===================================================== */
+
+.uno-tape {
+  position: absolute;
+
+  width: 125px;
+  height: 34px;
+
+  left: 50%;
+  top: -17px;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #e7b5a5 0 12px,
+      #f2c9bb 12px 24px
+    );
+
+  opacity: 0.95;
+
+  box-shadow:
+    0 3px 5px rgba(60,20,20,0.15);
+
+  z-index: 20;
+}
+
+
+/* =====================================================
+   CREAM INNER BORDER
+===================================================== */
+
+.uno-card-face {
+  width: 100%;
+  height: 100%;
+
+  padding: 8px;
+
+  background: #fff8e8;
+
+  border-radius: 8px;
+}
+
+
+/* =====================================================
+   RED CARD
+===================================================== */
+
+.uno-red-area {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d7192d 0%,
+      #c9142b 55%,
+      #bd1024 100%
+    );
+
+  border: 2px solid #fff8e8;
+}
+
+
+/* =====================================================
+   HAND-DRAWN WHITE CURVE
+===================================================== */
+
+.uno-curve {
+  position: absolute;
+
+  width: 465px;
+  height: 275px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-57deg);
+
+  border: 8px solid #fff8e8;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   LOVE YOU
+===================================================== */
+
+.uno-love-you {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 105px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(-11deg);
+
+  white-space: nowrap;
+
+  font-family:
+    "Permanent Marker",
+    "Caveat",
+    cursive;
+
+  font-size: 3.45rem;
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  letter-spacing: -1px;
+
+  color: #111;
+}
+
+
+/* =====================================================
+   MORE
+===================================================== */
+
+.uno-more {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 23px;
+
+  bottom: 85px;
+
+  transform: rotate(-11deg);
+
+  white-space: nowrap;
+
+  font-family:
+    "Permanent Marker",
+    "Caveat",
+    cursive;
+
+  font-size: 3.2rem;
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  color: #111;
+}
+
+
+.uno-more span {
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 2.7rem;
+
+  margin-left: 3px;
+}
+
+
+/* =====================================================
+   LITTLE HEART ON CARD
+===================================================== */
+
+.card-mini-heart {
+  position: absolute;
+
+  z-index: 7;
+
+  right: 47px;
+
+  top: 190px;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 2.4rem;
+
+  color: #fff8e8;
+
+  transform: rotate(12deg);
+}
+
+
+/* =====================================================
+   LITTLE SPARKLE
+===================================================== */
+
+.card-doodle {
+  position: absolute;
+
+  z-index: 7;
+
+  left: 38px;
+
+  bottom: 47px;
+
+  font-size: 1.6rem;
+
+  color: #fff8e8;
+
+  transform: rotate(-10deg);
+}
+
+@media (max-width: 700px) {
+
+  .uno-card {
+    width: 235px;
+    height: 340px;
+
+    padding: 9px;
+  }
+
+
+  .uno-card-face {
+    padding: 6px;
+  }
+
+
+  .uno-curve {
+    width: 370px;
+    height: 215px;
+
+    border-width: 6px;
+  }
+
+
+  .uno-love-you {
+    top: 82px;
+
+    font-size: 2.65rem;
+  }
+
+
+  .uno-more {
+    right: 13px;
+
+    bottom: 65px;
+
+    font-size: 2.45rem;
+  }
+
+
+  .uno-more span {
+    font-size: 2rem;
+  }
+
+
+  .card-mini-heart {
+    right: 34px;
+
+    top: 150px;
+
+    font-size: 1.9rem;
+  }
+
+
+  .card-doodle {
+    left: 27px;
+
+    bottom: 36px;
+
+    font-size: 1.3rem;
+  }
+}
+/* =====================================================
+   LOVE CARD PAGE — MAIN BACKGROUND
+===================================================== */
+
+.love-card-page {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ed7b8d;
+
+  /* EQUAL WIDTH PINK + RED STRIPES */
+
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      #ed7b8d 0px,
+      #ed7b8d 70px,
+      #c91d32 70px,
+      #c91d32 140px
+    );
+
+  color: #fff8ed;
+}
+
+
+/* =====================================================
+   SOFT PAPER TEXTURE
+===================================================== */
+
+.love-card-page::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.65) 0.7px,
+      transparent 0.8px
+    );
+
+  background-size: 6px 6px;
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   MAKE ALL DECORATIONS POSITION RELATIVE TO PAGE
+===================================================== */
+
+.love-card-page .uno-star,
+.love-card-page .uno-heart,
+.love-card-page .uno-rays {
+  position: absolute;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.love-card-page .uno-star {
+  color: #f6d447;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 3.8rem;
+
+  line-height: 1;
+
+  text-shadow:
+    2px 3px 0 rgba(85,40,15,0.2);
+}
+
+
+.uno-star-1 {
+  left: 7%;
+  top: 48%;
+
+  transform: rotate(-10deg);
+}
+
+
+.uno-star-2 {
+  right: 25%;
+  top: 8%;
+
+  font-size: 4.1rem !important;
+
+  transform: rotate(9deg);
+}
+
+
+.uno-star-3 {
+  left: 4%;
+  bottom: 9%;
+
+  font-size: 3.4rem !important;
+
+  transform: rotate(11deg);
+}
+
+
+.uno-star-4 {
+  right: 6%;
+  bottom: 8%;
+
+  font-size: 3.7rem !important;
+
+  transform: rotate(-9deg);
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+.love-card-page .uno-heart {
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 4rem;
+
+  line-height: 1;
+
+  color: #fff8ed;
+}
+
+
+.uno-heart-1 {
+  left: 20%;
+  top: 16%;
+
+  transform: rotate(-11deg);
+}
+
+
+.uno-heart-2 {
+  right: 14%;
+  top: 43%;
+
+  transform: rotate(10deg);
+}
+
+
+.uno-heart-3 {
+  right: 28%;
+  bottom: 7%;
+
+  font-size: 3.1rem !important;
+
+  transform: rotate(-9deg);
+}
+
+
+/* =====================================================
+   DOODLE RAYS
+===================================================== */
+
+.love-card-page .uno-rays {
+  width: 60px;
+  height: 50px;
+}
+
+
+.love-card-page .uno-rays span {
+  position: absolute;
+
+  display: block;
+
+  width: 25px;
+  height: 3px;
+
+  border-radius: 5px;
+
+  background: #fff8ed;
+}
+
+
+.rays-left {
+  left: 27%;
+  top: 35%;
+}
+
+
+.rays-left span:nth-child(1) {
+  top: 2px;
+  left: 0;
+
+  transform: rotate(-25deg);
+}
+
+
+.rays-left span:nth-child(2) {
+  top: 20px;
+  left: -5px;
+
+  transform: rotate(0deg);
+}
+
+
+.rays-left span:nth-child(3) {
+  top: 37px;
+  left: 0;
+
+  transform: rotate(25deg);
+}
+
+
+.rays-right {
+  right: 23%;
+  top: 40%;
+}
+
+
+.rays-right span:nth-child(1) {
+  top: 2px;
+  right: 0;
+
+  transform: rotate(25deg);
+}
+
+
+.rays-right span:nth-child(2) {
+  top: 20px;
+  right: -5px;
+
+  transform: rotate(0deg);
+}
+
+
+.rays-right span:nth-child(3) {
+  top: 37px;
+  right: 0;
+
+  transform: rotate(-25deg);
+}
+
+
+/* =====================================================
+   CENTER CARD POSITION
+===================================================== */
+
+.love-card-page .uno-card {
+  position: relative;
+
+  z-index: 10;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   JUST US
+===================================================== */
+
+.love-card-page .uno-just-us {
+  position: absolute;
+
+  z-index: 15;
+
+  left: 50%;
+  bottom: 65px;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.7rem;
+
+  font-weight: 600;
+
+  color: #fff8ed;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.love-card-page .uno-next {
+  position: absolute;
+
+  z-index: 30;
+
+  left: 50%;
+  bottom: 19px;
+
+  transform: translateX(-50%);
+
+  min-width: 120px;
+
+  padding: 11px 25px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #fff7e7;
+
+  color: #b51c30;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #7c202d,
+    0 8px 15px rgba(60,15,20,0.22);
+
+  transition: 0.25s ease;
+}
+
+
+.love-card-page .uno-next:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+}
+
+
+.love-card-page .uno-next:active {
+  transform:
+    translateX(-50%)
+    translateY(2px);
+
+  box-shadow:
+    0 3px 0 #7c202d;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .love-card-page {
+    min-height: 100vh;
+
+    background-image:
+      repeating-linear-gradient(
+        to bottom,
+        #ed7b8d 0px,
+        #ed7b8d 48px,
+        #c91d32 48px,
+        #c91d32 96px
+      );
+  }
+
+  .love-card-page .uno-just-us {
+    bottom: 61px;
+    font-size: 1.35rem;
+  }
+
+  .love-card-page .uno-next {
+    bottom: 17px;
+
+    min-width: 105px;
+
+    padding: 10px 20px;
+
+    font-size: 0.72rem;
+  }
+
+  .love-card-page .uno-rays {
+    display: none;
+  }
+
+  .love-card-page .uno-heart {
+    font-size: 2.8rem;
+  }
+
+  .uno-heart-1 {
+    left: 7%;
+    top: 18%;
+  }
+
+  .uno-heart-2 {
+    right: 5%;
+    top: 43%;
+  }
+
+  .uno-heart-3 {
+    right: 20%;
+    bottom: 7%;
+  }
+
+  .love-card-page .uno-star {
+    font-size: 2.5rem;
+  }
+
+  .uno-star-2 {
+    font-size: 3rem !important;
+  }
+}
+/* =====================================================
+   FINAL ANNIVERSARY PAGE
+   184 DAYS TO US BANGARAM
+===================================================== */
+
+.anniversary-final-page {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e66d84;
+
+  background-image:
+    repeating-radial-gradient(
+      ellipse at center,
+      #e66d84 0px,
+      #e66d84 22px,
+      #8e1735 23px,
+      #8e1735 42px
+    );
+
+  color: #fff8ec;
+}
+
+
+/* =====================================================
+   VERY LIGHT PAPER TEXTURE
+===================================================== */
+
+.anniversary-final-page::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.08;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.8) 0.7px,
+      transparent 0.9px
+    );
+
+  background-size: 7px 7px;
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   CORNER TEXT
+===================================================== */
+
+.anniversary-top-left {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 8%;
+  top: 10%;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.8rem;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  color: #fff5e8;
+
+  text-align: center;
+
+  transform: rotate(-7deg);
+}
+
+
+.anniversary-top-right {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 8%;
+  top: 10%;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.8rem;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  color: #fff5e8;
+
+  text-align: center;
+
+  transform: rotate(5deg);
+}
+
+
+/* =====================================================
+   MAIN CENTER
+===================================================== */
+
+.anniversary-center {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 50%;
+  top: 48%;
+
+  width: 520px;
+  height: 650px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   BIG m7 PHOTO
+===================================================== */
+
+.anniversary-photo {
+  position: relative !important;
+
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  width: 285px;
+  height: 350px;
+
+  padding: 11px;
+
+  margin-top: 0;
+
+  background: #fff4df;
+
+  box-shadow:
+    8px 10px 0 rgba(70,20,30,0.22),
+    0 18px 30px rgba(60,15,25,0.22);
+
+  transform: rotate(3deg);
+
+  flex-shrink: 0;
+}
+
+
+.anniversary-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   TEXT AREA
+===================================================== */
+
+.anniversary-message {
+  position: relative;
+
+  z-index: 20;
+
+  width: 430px;
+
+  margin-top: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+/* =====================================================
+   CUTE SCRAPBOOK BOXES
+===================================================== */
+
+.anniversary-box {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 7px 25px;
+
+  color: #8a2036;
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  line-height: 1;
+
+  box-shadow:
+    4px 5px 0 rgba(70,20,30,0.16);
+
+  border-radius: 2px;
+}
+
+
+/* =====================================================
+   HAPPYYY BOX
+===================================================== */
+
+.anniversary-happy {
+  width: 320px;
+
+  background: #fff1d6;
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  transform: rotate(-2deg);
+}
+
+
+/* =====================================================
+   184 DAYS BOX
+===================================================== */
+
+.anniversary-days {
+  width: 350px;
+
+  background: #f1a0ad;
+
+  color: #861d35;
+
+  font-size: 2.15rem;
+
+  font-weight: 700;
+
+  transform: rotate(1deg);
+}
+
+
+/* =====================================================
+   BANGARAM BOX
+===================================================== */
+
+.anniversary-bangaram {
+  width: 390px;
+
+  background: #fff1d6;
+
+  font-size: 1.75rem;
+
+  font-weight: 600;
+
+  transform: rotate(-1deg);
+}
+
+
+/* =====================================================
+   LITTLE HANDMADE PAPER EDGES
+===================================================== */
+
+.anniversary-happy::before,
+.anniversary-bangaram::before {
+  content: "";
+
+  position: absolute;
+
+  width: 55px;
+  height: 14px;
+
+  top: -8px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  background: rgba(235,194,174,0.8);
+}
+
+
+/* =====================================================
+   BOTTOM NOTE
+===================================================== */
+
+.anniversary-middle-note {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 50%;
+  bottom: 57px;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+  font-family:
+    "Dancing Script",
+    cursive;
+
+  font-size: 1.35rem;
+
+  font-weight: 500;
+
+  color: #fff7e8;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   AGAIN BUTTON
+===================================================== */
+
+.anniversary-finish {
+  position: absolute;
+
+  z-index: 30;
+
+  left: 50%;
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  padding: 10px 27px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #fff3dc;
+
+  color: #8d2037;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #681b2d,
+    0 8px 15px rgba(60,15,25,0.22);
+
+  transition: 0.25s ease;
+}
+
+
+.anniversary-finish:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .anniversary-center {
+    width: 100vw;
+    height: 590px;
+
+    left: 50%;
+    top: 48%;
+
+    transform: translate(-50%, -50%);
+  }
+
+
+  /* BIGGER PHOTO ON MOBILE TOO */
+
+  .anniversary-photo {
+    width: 190px;
+    height: 240px;
+
+    padding: 7px;
+
+    margin-top: 0;
+
+    transform: rotate(3deg);
+  }
+
+
+  .anniversary-message {
+    width: 92vw;
+
+    margin-top: 17px;
+
+    gap: 5px;
+  }
+
+
+  .anniversary-happy {
+    width: 245px;
+
+    min-height: 43px;
+
+    font-size: 1.65rem;
+  }
+
+
+  .anniversary-days {
+    width: 275px;
+
+    min-height: 47px;
+
+    font-size: 1.8rem;
+  }
+
+
+  .anniversary-bangaram {
+    width: 310px;
+
+    min-height: 45px;
+
+    font-size: 1.4rem;
+  }
+
+
+  .anniversary-top-left {
+    left: 5%;
+    top: 7%;
+
+    font-size: 1.2rem;
+  }
+
+
+  .anniversary-top-right {
+    right: 5%;
+    top: 8%;
+
+    font-size: 1.2rem;
+  }
+
+
+  .anniversary-middle-note {
+    bottom: 53px;
+
+    font-size: 1.1rem;
+  }
+
+
+  .anniversary-finish {
+    bottom: 14px;
+
+    padding: 9px 23px;
+
+    font-size: 0.7rem;
+  }
+}
+
+/* =====================================================
+   CURRENT JSX COMPATIBILITY / MISSING CLASSES
+   These styles restore the classes used by the current App.jsx.
+   The original envelope design is kept unchanged.
+===================================================== */
+
+/* -----------------------------------------------------
+   SPECIAL DELIVERY DECORATIONS
+----------------------------------------------------- */
+.delivery-label {
+  margin-top: 4px;
+  margin-bottom: 18px;
+  padding: 7px 16px;
+  background: #f6cdd0;
+  border-radius: 3px;
+  color: #913e49;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  box-shadow: 3px 4px 0 rgba(145, 62, 73, 0.1);
+  transform: rotate(-1deg);
+}
+
+.delivery-bow {
+  position: absolute;
+  z-index: 4;
+  font-size: 3.8rem;
+  opacity: 0.82;
+  pointer-events: none;
+  filter: drop-shadow(2px 3px 2px rgba(90, 35, 45, 0.12));
+}
+
+.delivery-bow-one {
+  left: 8%;
+  top: 18%;
+  transform: rotate(-12deg);
+}
+
+.delivery-bow-two {
+  right: 9%;
+  top: 25%;
+  transform: rotate(12deg);
+}
+
+.delivery-bow-three {
+  left: 13%;
+  bottom: 17%;
+  transform: rotate(8deg);
+}
+
+.delivery-bow-four {
+  right: 13%;
+  bottom: 15%;
+  transform: rotate(-10deg);
+}
+
+.delivery-sticker {
+  position: absolute;
+  z-index: 6;
+  padding: 8px 13px;
+  background: #fff4dc;
+  color: #96343c;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  box-shadow: 4px 5px 0 rgba(90, 35, 45, 0.13);
+  pointer-events: none;
+}
+
+.delivery-sticker-top {
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.delivery-sticker-left {
+  left: 14%;
+  top: 43%;
+  transform: rotate(-8deg);
+}
+
+.delivery-sticker-right {
+  right: 13%;
+  top: 47%;
+  transform: rotate(7deg);
+}
+
+.delivery-stamp {
+  position: absolute;
+  z-index: 6;
+  right: 21%;
+  top: 20%;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #96343c;
+  color: #96343c;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  transform: rotate(12deg);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.delivery-doodle {
+  position: absolute;
+  z-index: 6;
+  color: #a85c63;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.delivery-doodle-left {
+  left: 19%;
+  bottom: 24%;
+  transform: rotate(-15deg);
+}
+
+.delivery-doodle-right {
+  right: 18%;
+  bottom: 24%;
+  transform: rotate(15deg);
+}
+
+/* -----------------------------------------------------
+   10 THINGS — SMALL INLINE HEART
+----------------------------------------------------- */
+.little-heart {
+  display: inline;
+  margin-left: 7px;
+  font-family: "Dancing Script", cursive;
+  color: #bd2638;
+  font-size: 1.7rem;
+}
+
+/* -----------------------------------------------------
+   FINAL ANNIVERSARY PAGE — CURRENT JSX CLASSES
+----------------------------------------------------- */
+.anniversary-star {
+  position: absolute;
+  z-index: 4;
+  font-family: "Dancing Script", cursive;
+  color: #fff3d9;
+  font-size: 3rem;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
+.anniversary-star-1 {
+  left: 12%;
+  top: 18%;
+  transform: rotate(-12deg);
+}
+
+.anniversary-star-2 {
+  right: 13%;
+  top: 24%;
+  font-size: 3.6rem;
+  transform: rotate(10deg);
+}
+
+.anniversary-star-3 {
+  left: 18%;
+  bottom: 17%;
+  font-size: 2.4rem;
+  transform: rotate(8deg);
+}
+
+.anniversary-heart {
+  position: absolute;
+  z-index: 4;
+  font-family: "Dancing Script", cursive;
+  color: #fff2df;
+  font-size: 3.5rem;
+  pointer-events: none;
+}
+
+.anniversary-heart-1 {
+  left: 7%;
+  top: 37%;
+  transform: rotate(-14deg);
+}
+
+.anniversary-heart-2 {
+  right: 8%;
+  top: 42%;
+  transform: rotate(12deg);
+}
+
+.anniversary-heart-3 {
+  left: 14%;
+  bottom: 29%;
+  font-size: 2.6rem;
+  transform: rotate(8deg);
+}
+
+.anniversary-heart-4 {
+  right: 14%;
+  bottom: 22%;
+  font-size: 2.9rem;
+  transform: rotate(-10deg);
+}
+
+.anniversary-paper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 8px 28px;
+  box-shadow: 5px 6px 0 rgba(70, 20, 30, 0.16);
+  color: #8a2036;
+  font-family: "Dancing Script", cursive;
+  line-height: 1;
+}
+
+.paper-happy {
+  width: 310px;
+  background: #fff1d6;
+  font-size: 2rem;
+  font-weight: 600;
+  transform: rotate(-3deg);
+}
+
+.paper-days {
+  width: 345px;
+  background: #f1a0ad;
+  color: #861d35;
+  font-size: 2.15rem;
+  font-weight: 700;
+  transform: rotate(2deg);
+}
+
+.paper-with {
+  width: 385px;
+  background: #fff1d6;
+  font-size: 1.8rem;
+  font-weight: 600;
+  transform: rotate(-2deg);
+}
+
+.paper-happy::before,
+.paper-with::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 14px;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  background: rgba(235, 194, 174, 0.82);
+}
+
+.paper-with span {
+  margin-left: 9px;
+  color: #d54b63;
+}
+
+.anniversary-side-note {
+  position: absolute;
+  z-index: 7;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.45rem;
+  line-height: 1.05;
+  color: #fff5e7;
+  text-align: center;
+  pointer-events: none;
+}
+
+.anniversary-note-left {
+  left: 11%;
+  top: 48%;
+  transform: rotate(-7deg);
+}
+
+.anniversary-note-right {
+  right: 10%;
+  top: 52%;
+  transform: rotate(7deg);
+}
+
+@media (max-width: 700px) {
+  .delivery-bow {
+    font-size: 2.7rem;
+  }
+
+  .delivery-sticker {
+    font-size: 0.5rem;
+    padding: 6px 9px;
+  }
+
+  .delivery-sticker-left,
+  .delivery-sticker-right,
+  .delivery-stamp {
+    display: none;
+  }
+
+  .delivery-sticker-top {
+    top: 7%;
+  }
+
+  .delivery-doodle {
+    font-size: 2.2rem;
+  }
+
+  .anniversary-paper.paper-happy {
+    width: 245px;
+    font-size: 1.65rem;
+  }
+
+  .anniversary-paper.paper-days {
+    width: 275px;
+    font-size: 1.8rem;
+  }
+
+  .anniversary-paper.paper-with {
+    width: 310px;
+    font-size: 1.4rem;
+  }
+
+  .anniversary-side-note,
+  .anniversary-star,
+  .anniversary-heart {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .delivery-bow {
+    display: none;
+  }
+
+  .anniversary-paper.paper-happy {
+    width: 220px;
+  }
+
+  .anniversary-paper.paper-days {
+    width: 250px;
+  }
+
+  .anniversary-paper.paper-with {
+    width: 280px;
+  }
+}
