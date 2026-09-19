@@ -365,29 +365,34 @@ button {
     min-height: 100svh !important;
     width: 100% !important;
 
-    background-image: url("./assets/check.jpg") !important;
+    background-image: url("./assets/star.jpg") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 
     padding: 20px 15px !important;
-    box-sizing: border-box;
-    overflow: hidden;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .delivery-screen::before,
+  .delivery-screen::after {
+    background: none !important;
+    background-image: none !important;
   }
 
   .delivery-content {
     width: 88vw !important;
     max-width: 340px !important;
     min-height: 430px !important;
-
     padding: 35px 25px !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
   }
 
   .delivery-content h1 {
     font-size: 2.3rem !important;
     line-height: 1.1 !important;
-    text-align: center;
+    text-align: center !important;
   }
 
   .delivery-label {
@@ -401,22 +406,6 @@ button {
 
   .delivery-sticker {
     font-size: 0.55rem !important;
-  }
-
-  .delivery-sticker-top {
-    top: 8% !important;
-  }
-
-  .delivery-sticker-left {
-    left: 4% !important;
-  }
-
-  .delivery-sticker-right {
-    right: 4% !important;
-  }
-
-  .delivery-stamp {
-    transform: scale(0.8);
   }
 }
 /* =========================================================
