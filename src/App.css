@@ -62,14 +62,22 @@ button {
   z-index: 2;
 }
 
+/* =========================
+   MOBILE - PAGE 1
+========================= */
+
 @media (max-width: 600px) {
   .intro-screen {
-    min-height: 100svh;
+    min-height: 100svh !important;
+    width: 100% !important;
 
-    background-image: url("./assets/heart.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("./assets/heart.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    padding: 20px !important;
+    box-sizing: border-box;
   }
 }
 /* =========================================
@@ -332,37 +340,70 @@ button {
 /* =========================================================
    SPECIAL DELIVERY — FINAL SCRAPBOOK VERSION
 ========================================================= */
-/* =====================================================
-   2. SPECIAL DELIVERY — IMAGE BACKGROUND
-===================================================== */
-
 .delivery-screen {
   min-height: 100vh;
   width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 
-  padding: 40px 20px;
-
-  /* PAGE 2 BACKGROUND IMAGE */
-  background-image: url("./assets/check.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("./assets/star.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
+/* =========================================
+   PAGE 2 — MOBILE VIEW
+========================================= */
 
 @media (max-width: 600px) {
+
   .delivery-screen {
-    min-height: 100dvh;
-    background-size: cover;
-    background-position: center;
+    min-height: 100svh;
+    width: 100%;
+
+    background-image: url("./assets/check.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    padding: 20px 15px;
+    box-sizing: border-box;
+
+    overflow: hidden;
   }
+
+  .delivery-content {
+    width: 88vw;
+    max-width: 340px;
+    min-height: 430px;
+
+    padding: 35px 25px;
+
+    box-sizing: border-box;
+  }
+
+  .delivery-content h1 {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .delivery-label {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .delivery-bow {
+    font-size: 2.8rem;
+  }
+
+  .delivery-sticker {
+    font-size: 0.55rem;
+  }
+
 }
 /* =========================================================
    CENTER CARD
@@ -1873,6 +1914,28 @@ button {
 /* =========================================
    LETTER PAPER
 ========================================= */
+/* =========================================
+   PAGE 5 — LOVE LETTER
+========================================= */
+
+.letter-screen {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background-image: url("./assets/kiss.jpg") !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
 
 .love-letter {
   width: min(620px, 88vw);
@@ -1911,7 +1974,80 @@ button {
   animation: letterAppear 0.7s ease forwards;
 }
 
+/* =========================================
+   PAGE 5 — LOVE LETTER — MOBILE VIEW
+========================================= */
 
+@media (max-width: 600px) {
+
+  .letter-screen {
+    min-height: 100svh;
+    width: 100%;
+
+    padding: 35px 12px 70px;
+    box-sizing: border-box;
+
+    background-image: url("./assets/kiss.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    overflow-y: auto;
+  }
+
+  .love-letter {
+    width: 88vw;
+    max-width: 500px;
+
+    min-height: auto;
+
+    padding: 50px 28px 40px;
+
+    box-sizing: border-box;
+
+    transform: rotate(-1deg);
+  }
+
+  .letter-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .letter-small-title {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .love-letter p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .letter-ending {
+    font-size: 1rem !important;
+  }
+
+  .letter-signature {
+    font-size: 1rem;
+  }
+
+  .letter-tape {
+    width: 95px;
+    height: 23px;
+  }
+
+  .letter-next {
+    position: relative;
+    z-index: 20;
+
+    margin-top: 25px;
+
+    padding: 10px 20px;
+
+    font-size: 0.8rem;
+  }
+
+}
 /* =========================================
    INNER BORDER
 ========================================= */
