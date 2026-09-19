@@ -354,56 +354,70 @@ button {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
-/* =========================================
-   PAGE 2 — MOBILE VIEW
-========================================= */
+/* =========================
+   MOBILE - PAGE 2
+   SPECIAL DELIVERY
+========================= */
 
 @media (max-width: 600px) {
 
   .delivery-screen {
-    min-height: 100svh;
-    width: 100%;
+    min-height: 100svh !important;
+    width: 100% !important;
 
     background-image: url("./assets/check.jpg") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 
-    padding: 20px 15px;
+    padding: 20px 15px !important;
     box-sizing: border-box;
-
     overflow: hidden;
   }
 
   .delivery-content {
-    width: 88vw;
-    max-width: 340px;
-    min-height: 430px;
+    width: 88vw !important;
+    max-width: 340px !important;
+    min-height: 430px !important;
 
-    padding: 35px 25px;
-
+    padding: 35px 25px !important;
     box-sizing: border-box;
   }
 
   .delivery-content h1 {
-    font-size: 2.3rem;
-    line-height: 1.1;
+    font-size: 2.3rem !important;
+    line-height: 1.1 !important;
     text-align: center;
   }
 
   .delivery-label {
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+    font-size: 0.65rem !important;
+    letter-spacing: 2px !important;
   }
 
   .delivery-bow {
-    font-size: 2.8rem;
+    font-size: 2.8rem !important;
   }
 
   .delivery-sticker {
-    font-size: 0.55rem;
+    font-size: 0.55rem !important;
   }
 
+  .delivery-sticker-top {
+    top: 8% !important;
+  }
+
+  .delivery-sticker-left {
+    left: 4% !important;
+  }
+
+  .delivery-sticker-right {
+    right: 4% !important;
+  }
+
+  .delivery-stamp {
+    transform: scale(0.8);
+  }
 }
 /* =========================================================
    CENTER CARD
