@@ -331,7 +331,6 @@ function App() {
           6. LOVE LETTER
       ================================= */}
 
-
 {openLetter && !showMemories && (
   <section className="letter-screen">
 
@@ -341,29 +340,30 @@ function App() {
 
       {/* REALISTIC LIPSTICK PRINTS */}
 
-<div className="kiss-print kiss-1">
-  <div className="lip-top"></div>
-  <div className="lip-bottom"></div>
-  <div className="lip-gap"></div>
-</div>
+      <div className="kiss-print kiss-1">
+        <div className="lip-top"></div>
+        <div className="lip-bottom"></div>
+        <div className="lip-gap"></div>
+      </div>
 
-<div className="kiss-print kiss-2">
-  <div className="lip-top"></div>
-  <div className="lip-bottom"></div>
-  <div className="lip-gap"></div>
-</div>
+      <div className="kiss-print kiss-2">
+        <div className="lip-top"></div>
+        <div className="lip-bottom"></div>
+        <div className="lip-gap"></div>
+      </div>
 
-<div className="kiss-print kiss-3">
-  <div className="lip-top"></div>
-  <div className="lip-bottom"></div>
-  <div className="lip-gap"></div>
-</div>
+      <div className="kiss-print kiss-3">
+        <div className="lip-top"></div>
+        <div className="lip-bottom"></div>
+        <div className="lip-gap"></div>
+      </div>
 
-<div className="kiss-print kiss-4">
-  <div className="lip-top"></div>
-  <div className="lip-bottom"></div>
-  <div className="lip-gap"></div>
-</div>
+      <div className="kiss-print kiss-4">
+        <div className="lip-top"></div>
+        <div className="lip-bottom"></div>
+        <div className="lip-gap"></div>
+      </div>
+
       <div className="letter-small-title">
         A LITTLE LETTER FOR YOU ♡
       </div>
@@ -375,42 +375,54 @@ function App() {
       <div className="letter-content">
 
         <p>
-          Dearestt maddihh,
+          Dearesttt Maddihh ♡
         </p>
 
         <p>
-          I don't really know where to start,
-          because there are just so many things
-          I want to say to you.
+          Happiiiee half a year anniversary chittiiiii 🤍🤎
         </p>
 
         <p>
-          You make ordinary days feel special,
-          and somehow you make everything
-          a little happier just by being there.
+          Six months of us, and still a thousand feelings I can't put into
+          words. Looking back, all I see is our laughter, love, care, and all
+          our tiny little moments. I've fallen so much more in love with you
+          every single day, can't even help it btw🤭
         </p>
 
         <p>
-          I'm so grateful for all the memories
-          we've made, all the laughs, all the
-          silly moments, and everything in between.
+          184 days might seem like a little, but to us, they hold so much. I
+          know neither of us is perfect, and we don't have everything figured
+          out, but one thing I know for sure is that my love for you is real,
+          and I never wanna take us for granted.
         </p>
 
         <p>
-          So today, I just want you to know
-          how incredibly special you are to me.
+          I don't know what the future holds for us, but I know I wanna keep
+          loving you, growing with you, and making this love something we both
+          feel safe and happy in. Ik we've had our fair share of arguments,
+          but I'm really happy that we could sit down, talk things through,
+          and understand each other better. And honestly, that's something I
+          cherish about us.
+        </p>
+
+        <p>
+          Sometimes I wish you could see yourself through my eyes, just so
+          you'd understand how incredibly special you are to me. If I could
+          go back to the beginning, I'd still choose you, and I'd fall for
+          you all over again, in every little way. I lovee youu moreeeee than
+          you can imagine bangaram. Might not be perfect, but it's ours, and
+          that's what makes it so special😭🧿🤍
         </p>
 
         <p className="letter-ending">
-          Happiieee 180 days of us beings us chitti ♡
+          Happyy 6 months to us bangarammm ♡
         </p>
 
-      </div>
+        <p>
+          with all the love,<br />
+          bhunu ♡
+        </p>
 
-      <div className="letter-signature">
-        forever yours,
-        <br />
-        <span>♡</span>
       </div>
 
       <div className="letter-bottom-doodle">
@@ -419,17 +431,16 @@ function App() {
 
     </div>
 
-
     <button
-  className="letter-next"
-  onClick={() => {
-    setOpenLetter(false);
-    setShowSurprise(false);
-    setShowMemories(true);
-  }}
->
-  turn the page →
-</button>
+      className="letter-next"
+      onClick={() => {
+        setOpenLetter(false);
+        setShowSurprise(false);
+        setShowMemories(true);
+      }}
+    >
+      turn the page →
+    </button>
 
   </section>
 )}
@@ -667,9 +678,9 @@ function App() {
         <div className="ten-thing">
           <span>9.</span>
           <p>
-            I love the person you are when
+            I love the you for the person you are 
             <br />
-            nobody is watching.
+            and for the person you want to be.
           </p>
         </div>
 
