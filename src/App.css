@@ -1977,53 +1977,44 @@ button {
   animation: letterAppear 0.7s ease forwards;
 }
 
-/* =========================================
-   PAGE 5 — LOVE LETTER — MOBILE VIEW
-========================================= */
-
 @media (max-width: 600px) {
-
   .letter-screen {
-    min-height: 100svh;
-    width: 100%;
-
-    padding: 35px 12px 70px;
-    box-sizing: border-box;
+    min-height: 100svh !important;
+    width: 100% !important;
+    padding: 35px 12px 70px !important;
+    box-sizing: border-box !important;
 
     background-image: url("./assets/kiss.jpg") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 
-    overflow-y: auto;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
   }
 
   .love-letter {
-    width: 88vw;
-    max-width: 500px;
-
-    min-height: auto;
-
-    padding: 50px 28px 40px;
-
-    box-sizing: border-box;
-
+    width: 88vw !important;
+    max-width: 500px !important;
+    min-height: auto !important;
+    padding: 50px 28px 40px !important;
+    box-sizing: border-box !important;
     transform: rotate(-1deg);
   }
 
   .letter-title {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
   }
 
   .letter-small-title {
-    font-size: 9px;
-    letter-spacing: 1.5px;
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
   }
 
   .love-letter p {
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
   }
 
   .letter-ending {
@@ -2031,25 +2022,21 @@ button {
   }
 
   .letter-signature {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   .letter-tape {
-    width: 95px;
-    height: 23px;
+    width: 95px !important;
+    height: 23px !important;
   }
 
   .letter-next {
-    position: relative;
-    z-index: 20;
-
-    margin-top: 25px;
-
-    padding: 10px 20px;
-
-    font-size: 0.8rem;
+    position: relative !important;
+    z-index: 20 !important;
+    margin-top: 25px !important;
+    padding: 10px 20px !important;
+    font-size: 0.8rem !important;
   }
-
 }
 /* =========================================
    INNER BORDER
